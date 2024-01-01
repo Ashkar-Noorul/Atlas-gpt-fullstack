@@ -40,7 +40,7 @@ export const logoutUser = async () => {
   return data;
 };
 
-export const sendChatRequest = async (message: string){
+export const sendChatRequest = async (message: string) => {
   const res = await axios.post("/chat/new", { message });
   if (res.status !== 200) {
     throw new Error("unable to send chat");
